@@ -24,7 +24,7 @@ const createModal = (image) => {
 
   const btnPrev = document.createElement("img");
   btnPrev.classList.add("btn");
-  btnPrev.src = "./../public/assets/icons/Path 2(1).svg";
+  btnPrev.src = "./../../public/assets/icons/Path 2(1).svg";
 
   btnPrev.addEventListener("click", () => {
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
@@ -33,7 +33,7 @@ const createModal = (image) => {
 
   const btnNext = document.createElement("img");
   btnNext.classList.add("btn");
-  btnNext.src = "./../public/assets/icons/Path 2.svg";
+  btnNext.src = "./../../public/assets/icons/Path 2.svg";
 
   btnNext.addEventListener("click", () => {
     currentImageIndex = (currentImageIndex + 1) % images.length;
