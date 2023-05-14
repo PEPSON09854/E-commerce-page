@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #00000038;
+    position: absolute;
+    top: 20px;
+}
+
+.header .menu-mobile {
+    display: none;
+}
+
+.header :nth-child(4) {
+    cursor: pointer;
+}
+
+.header :nth-child(5) {
+    cursor: pointer;
+}
+
+.header nav {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 450px;
+    margin-top: 40px;
+
+
+}
+
+.header nav :nth-child(1) {
+    display: none;
+}
+
+.header nav a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #0000009c;
+    padding-bottom: 37px;
+    transition: .1s ease-in-out;
+}
+
+.header nav a:hover {
+    color: #000000;
+    border-bottom: 5px solid #FF7E1B;
+    padding-bottom: 37px;
+}
+
+.header #counter {
+    color: #fff;
+    background-color: #FF7E1B;
+    border-radius: 100%;
+    padding: 0 8px;
+    font-size: 15px;
+    position: absolute;
+    right: 88px;
+    top: 27px;
+    font-weight: 800;
+    display: none;
+}
+
+.menu-cart {
+    display: none;
+}
+
+.menu-cart-empty {
+    display: none;
+}
+
+.open-menu-cart-empty {
+    width: 360px;
+    height: 256px;
+    box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    right: 100px;
+    top: 100px;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.menu-cart-empty .menu-cart-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .6s ease-in-out;
+}
+
+.menu-cart-empty .menu-cart-close:hover {
+    color: #FF7E1B;
+    transform: scale(1.2);
+}
+
+
+
+.menu-cart-empty h2 {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    padding: 20px;
+    border-bottom: #0000002c solid 1px;
+}
+
+.menu-cart-empty p {
+    font-size: 16px;
+    margin-top: 60px;
+}
+
+.open-menu-cart {
+    width: 360px;
+    height: 256px;
+    box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    right: 100px;
+    top: 100px;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.menu-cart .menu-cart-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .6s ease-in-out;
+}
+
+.menu-cart .menu-cart-close:hover {
+    color: #FF7E1B;
+    transform: scale(1.2);
+}
+
+
+.menu-cart h2 {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    padding: 20px;
+    border-bottom: #0000002c solid 1px;
+}
+
+.menu-cart button {
+    position: absolute;
+    width: 310px;
+    height: 50px;
+    background-color: #FF7E1B;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+
+.menu-cart .card-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+}
+
+.menu-cart .card-menu img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+}
+
+.menu-cart .card-menu span {
+    margin-right: 20px;
+    margin-top: -50px;
+    font-size: 15px;
+
+}
+
+.menu-cart .card-menu .card-menu-price {
+    height: 50px;
+}
+
+
+.menu-cart .delete {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 30px;
+    top: 145px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.menu-cart .delete:hover {
+    transform: scale(1.1);
+
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
+    padding: 200px 0;
+    z-index: 0;
+    margin-bottom: 2em;
+
+}
+
+#container .product-image {
+    margin-top: -70px;
+    margin-right: 90px;
+    height: 410px;
+    width: 470px;
+}
+
+#container .card {
+    width: 50%;
+    height: auto;
+    margin-right: -100px;
+    margin-top: 30px;
+    margin-bottom: -2em;
+
+
+}
+
+#container .card span {
+    font-size: 20px;
+    color: #FF7E1B;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#container .card h2 {
+    font-size: 46px;
+    margin: .4em 0;
+
+}
+
+#container .card p {
+    width: 450px;
+    line-height: 30px;
+    font-size: 16px;
+
+}
+
+.card-menu .card-menu-price .counter3 {
+    margin-left: -12px;
+}
+
+.total {
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+#container .price {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+
+}
+
+#container .price :nth-child(1) {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+#container .price :nth-child(2) {
+    background-color: #FFEEE2;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 6px;
+
+}
+
+#container .sale {
+    text-decoration: line-through;
+    opacity: .5;
+
+
+}
+
+#container .add {
+    width: 74%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#container .add-product {
+    width: 38%;
+    height: 56px;
+    display: flex;
+    text-align: center;
+    border: #00000032 solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#container .add-product button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FF7E1B;
+    cursor: pointer;
+
+}
+
+#container .add-product p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#container .add-cart {
+
+    width: 262px;
+    height: 56px;
+    background-color: #FF7E1B;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    border: #00000025 solid 1px;
+
+}
+
+#container .add-cart button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    margin: 0 15px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bolder;
+}
+
+#container .images {
+    position: absolute;
+    width: 40%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    left: 56px;
+    cursor: pointer;
+}
+
+
+#container .images :nth-child(1) {
+    margin-left: -30px;
+    border-radius: 10px;
+    border: #FF7E1B 3px solid;
+}
+
+#container .images :nth-child(1):hover {
+    opacity: .3;
+}
+
+#container .images :nth-child(2):hover {
+    opacity: .3;
+
+}
+
+#container .images :nth-child(3):hover {
+    opacity: .3;
+}
+
+#container .images :nth-child(4):hover {
+    opacity: .3;
+}
+
+.imgs {
+    display: flex;
+}
+
+#container .images img {
+    margin-left: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    border: #FF7E1B 3px solid;
+
+
+}
+
+.modal {
+    width: 30%;
+    height: 60%;
+    position: absolute;
+    display: flex;
+
+}
+
+.modal .btns {
+    position: absolute;
+    top: 200px;
+    width: 115%;
+    left: -35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal .btns .btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #f1eeee;
+    border-radius: 100%;
+    padding: 15px;
+    transition: transform .3s linear;
+}
+
+.modal .btns .btn:hover {
+    transform: scale(1.1);
+}
+
+
+#modal {
+    width: 100%;
+    height: 100%;
+    background-color: #000000e4;
+    position: absolute;
+    display: none;
+}
+
+.modal img {
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+}
+
+.close-modal {
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    font-size: 30px;
+    width: 50px;
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+
+}
+
+.close-modal:hover {
+    color: #FF7E1B;
+    transform: scale(1.1);
+}
+
+@keyframes menu-cart {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

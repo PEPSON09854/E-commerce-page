@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../public/css/style.css">
+    <link rel="stylesheet" href="./../public/css/moblile.css">
+    <title>E-commerce page</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="menu-mobile" src="./assets/icons/Combined Shape.svg" alt="menu mobile">
+        <h1><img src="./assets/images/sneakers.png" alt="Logo"></h1>
+        <nav id="nav-bar">
+            <a href="#" class="menu-mobile">x</a>
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <p id="counter" class="counter">0</p>
+        <img id="btn-cart" src="./assets/icons/Shape.svg" alt="carrinho">
+        <img src="./assets/images/Oval.png" alt="perfil">
+    </header>
+
+    <div id="menu-cart-empty" class="menu-cart-empty">
+        <h2>Cart</h2>
+        <p>Your cart is empty.</p>
+        <span class="menu-cart-close">x</span>
+    </div>
+    <div id="menu-cart" class="menu-cart ">
+        <h2>Cart</h2>
+        <span class="menu-cart-close">x</span>
+        <div class="card-menu">
+            <img src="./assets/images/Rectangle.png" alt="foto do produto">
+            <div class="card-menu-price">
+                <span>Fall Limited Edition Sneakers</span>
+                <span id="value-product">$125.00</span><span class="counter3">x</span><span
+                    class="counter counter3">0</span>
+                <span id="total" class="total"></span>
+            </div>
+        </div>
+        <button>Checkout</button>
+        <img id="delete" class="delete" src="./assets/images/Mask.png" alt="Lixeira">
+    </div>
+
+    <main>
+        <div id="container">
+            <img class="product-image" src="./assets/images/Rectangle.png" alt="">
+            <div class="card">
+                <span>SNEAKER COMPANY</span>
+                <h2>Fall Limited Edition Sneakers</h2>
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer
+                    sole,
+                    they`ll withstand everything the weather can offer.</p>
+                <div class="price">
+                    <span>$125.00</span>
+                    <span>50%</span>
+                    <span class="sale">$250.00</span>
+                </div>
+                <div class="add">
+                    <div class="add-product">
+                        <button id="decrease">-</button>
+                        <p class="counter">0</p>
+                        <button id="increase">+</button>
+                    </div>
+                    <div id="add-cart" class="add-cart">
+                        <img src="./assets/images/Shape(1).png" alt="">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="images">
+                <img class="image" src="./assets/images/Rectangle.png" alt="">
+                <img class="image" src="./assets/images/Rectangle Copy 2.png" alt="">
+                <img class="image" src="./assets/images/Rectangle Copy 3.png" alt="">
+                <img class="image" src="./assets/images/Rectangle Copy 4.png" alt="">
+            </div>
+        </div>
+    </main>
+    <div id="modal"></div>
+    <script type="module" src="./../src/index.js"></script>
+</body>
+
+</html>
