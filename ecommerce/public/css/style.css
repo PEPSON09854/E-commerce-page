@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     width: 100%;
     justify-content: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 main {
@@ -28,18 +30,18 @@ main {
     justify-content: space-between;
     border-bottom: 1px solid #00000038;
     position: absolute;
-    top: 20px;
+    top: 0;
 }
 
 .header .menu-mobile {
     display: none;
 }
 
-.header :nth-child(4) {
+.header :nth-child(5) {
     cursor: pointer;
 }
 
-.header :nth-child(5) {
+.header :nth-child(6) {
     cursor: pointer;
 }
 
@@ -48,7 +50,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 450px;
+    margin-right: 350px;
     margin-top: 40px;
 
 
@@ -263,9 +265,8 @@ main {
 
 #container .product-image {
     margin-top: -70px;
-    margin-right: 90px;
-    height: 410px;
-    width: 470px;
+    width: 450px;
+    height: 380px;
 }
 
 #container .card {
@@ -307,10 +308,12 @@ main {
     margin-left: 30px;
 }
 
-#container .price {
+#container .card .price {
     display: flex;
+    width: 100%;
     align-items: flex-start;
     margin: 20px 0;
+    border: #000000 solide 1px;
 
 }
 
@@ -329,19 +332,22 @@ main {
 
 }
 
-#container .sale {
+#container .card .price .sale {
     text-decoration: line-through;
     opacity: .5;
-
+    position: absolute;
+    top: 435px;
+    color: #00000090;
 
 }
 
 #container .add {
-    width: 74%;
+    width: 80%;
     height: 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 40px;
 
 }
 
@@ -398,14 +404,16 @@ main {
 
 #container .images {
     position: absolute;
-    width: 40%;
+
     height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    bottom: 0;
-    left: 56px;
+    bottom: 30px;
+    left: 80px;
     cursor: pointer;
+
+
 }
 
 
@@ -442,7 +450,7 @@ main {
     height: 100%;
     border-radius: 13px;
     border: #FF7E1B 3px solid;
-
+    z-index: 1;
 
 }
 
