@@ -3,6 +3,8 @@
 Este é um projeto de exemplo de um website de comércio eletrônico. O objetivo deste projeto é demonstrar a estrutura básica de uma página HTML para um site de e-commerce, juntamente com a interação dos elementos da página usando JavaScript. O protótipo utilizado como base vc pode 
 encontra-lo nesse link: https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6
 
+Veja o projeto final clicando aqui: https://pepson-ecommerce-page.netlify.app/
+
 ## Conteúdo do Projeto
 
 O projeto consiste em vários arquivos que descrevem a estrutura do site e a lógica de interação:
